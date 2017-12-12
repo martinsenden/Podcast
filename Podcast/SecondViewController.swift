@@ -22,6 +22,7 @@ class SecondViewController: UIViewController {
     
     func testFunction(){
         print("hi")
+        print("Test")
     }
 
 
