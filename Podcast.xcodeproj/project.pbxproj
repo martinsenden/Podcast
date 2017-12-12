@@ -16,6 +16,7 @@
 		842DEBBA1FDFDC7900762848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB81FDFDC7900762848 /* LaunchScreen.storyboard */; };
 		842DEBC51FDFDC7900762848 /* PodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBC41FDFDC7900762848 /* PodcastTests.swift */; };
 		842DEBD01FDFDC7900762848 /* PodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBCF1FDFDC7900762848 /* PodcastUITests.swift */; };
+		842DEBE01FE042A700762848 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842DEBDF1FE0362B00762848 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842DEBE01FE042A700762848 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
