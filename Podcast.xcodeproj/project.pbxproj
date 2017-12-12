@@ -51,6 +51,7 @@
 		842DEBCB1FDFDC7900762848 /* PodcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		842DEBCF1FDFDC7900762848 /* PodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastUITests.swift; sourceTree = "<group>"; };
 		842DEBD11FDFDC7900762848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842DEBDF1FE0362B00762848 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 				842DEBC31FDFDC7900762848 /* PodcastTests */,
 				842DEBCE1FDFDC7900762848 /* PodcastUITests */,
 				842DEBAB1FDFDC7900762848 /* Products */,
+				842DEBDD1FE035AD00762848 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +139,14 @@
 				842DEBD11FDFDC7900762848 /* Info.plist */,
 			);
 			path = PodcastUITests;
+			sourceTree = "<group>";
+		};
+		842DEBDD1FE035AD00762848 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				842DEBDF1FE0362B00762848 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
