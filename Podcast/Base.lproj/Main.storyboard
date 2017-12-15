@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zG3-AL-dVB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zG3-AL-dVB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,27 +75,11 @@
         <!--Search-->
         <scene sceneID="4ii-La-N8m">
             <objects>
-                <viewController id="wap-IT-oUR" sceneMemberID="viewController">
+                <viewController id="wap-IT-oUR" customClass="SearchViewController" customModule="Podcast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ts-vo-0JJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-WU-zZI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="lhC-4t-12r" firstAttribute="trailing" secondItem="RM3-WU-zZI" secondAttribute="trailing" id="36k-ea-m89"/>
-                            <constraint firstItem="lhC-4t-12r" firstAttribute="bottom" secondItem="RM3-WU-zZI" secondAttribute="bottom" id="KLz-vG-34K"/>
-                            <constraint firstItem="RM3-WU-zZI" firstAttribute="leading" secondItem="lhC-4t-12r" secondAttribute="leading" id="VCZ-bo-I2r"/>
-                            <constraint firstItem="RM3-WU-zZI" firstAttribute="top" secondItem="lhC-4t-12r" secondAttribute="top" id="og3-07-DZb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lhC-4t-12r"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="OA1-y2-nLL"/>

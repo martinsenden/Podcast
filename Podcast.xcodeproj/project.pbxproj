@@ -10,7 +10,7 @@
 		040A48E31FE01DCB0004398E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 040A48E21FE01DCB0004398E /* .gitignore */; };
 		842DEBAE1FDFDC7900762848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBAD1FDFDC7900762848 /* AppDelegate.swift */; };
 		842DEBB01FDFDC7900762848 /* PodcastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */; };
-		842DEBB21FDFDC7900762848 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBB11FDFDC7900762848 /* SecondViewController.swift */; };
+		842DEBB21FDFDC7900762848 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBB11FDFDC7900762848 /* SearchViewController.swift */; };
 		842DEBB51FDFDC7900762848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB31FDFDC7900762848 /* Main.storyboard */; };
 		842DEBB71FDFDC7900762848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB61FDFDC7900762848 /* Assets.xcassets */; };
 		842DEBBA1FDFDC7900762848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB81FDFDC7900762848 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		842DEBAA1FDFDC7900762848 /* Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842DEBAD1FDFDC7900762848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListViewController.swift; sourceTree = "<group>"; };
-		842DEBB11FDFDC7900762848 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		842DEBB11FDFDC7900762848 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		842DEBB41FDFDC7900762848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		842DEBB61FDFDC7900762848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842DEBB91FDFDC7900762848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			children = (
 				842DEBAD1FDFDC7900762848 /* AppDelegate.swift */,
 				842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */,
-				842DEBB11FDFDC7900762848 /* SecondViewController.swift */,
+				842DEBB11FDFDC7900762848 /* SearchViewController.swift */,
 				842DEBB31FDFDC7900762848 /* Main.storyboard */,
 				842DEBB61FDFDC7900762848 /* Assets.xcassets */,
 				842DEBB81FDFDC7900762848 /* LaunchScreen.storyboard */,
@@ -286,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842DEBB21FDFDC7900762848 /* SecondViewController.swift in Sources */,
+				842DEBB21FDFDC7900762848 /* SearchViewController.swift in Sources */,
 				842DEBAE1FDFDC7900762848 /* AppDelegate.swift in Sources */,
 				842DEBB01FDFDC7900762848 /* PodcastListViewController.swift in Sources */,
 			);
