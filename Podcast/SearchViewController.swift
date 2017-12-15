@@ -21,7 +21,7 @@ class SearchViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url = URL(string: "https://www.listennotes.com")!
+        let url = URL(string: "http://itunes.so-nik.com/")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
