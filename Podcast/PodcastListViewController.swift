@@ -8,6 +8,13 @@
 
 import UIKit
 
+class PodcastTableCell:  UITableViewCell {
+    
+    @IBOutlet weak var podcastImage: UIImageView!
+    @IBOutlet weak var podcastLabel: UILabel!
+}
+
+
 class PodcastListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var podcastTableView: UITableView!
@@ -18,10 +25,10 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell")
+        let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath) as! PodcastTableCell
         
-        cell?.textLabel?.text = "Röv"
-        return cell!
+        cell.textLabel?.text = "Röv"
+        return cell
         
     }
     
