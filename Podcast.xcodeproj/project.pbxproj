@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040A48E31FE01DCB0004398E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 040A48E21FE01DCB0004398E /* .gitignore */; };
+		0479CF6A1FE6CCB1003E00DB /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479CF691FE6CCB1003E00DB /* EpisodeListViewController.swift */; };
 		842DEBAE1FDFDC7900762848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBAD1FDFDC7900762848 /* AppDelegate.swift */; };
 		842DEBB01FDFDC7900762848 /* PodcastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */; };
 		842DEBB21FDFDC7900762848 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBB11FDFDC7900762848 /* SearchViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		040A48E21FE01DCB0004398E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0479CF691FE6CCB1003E00DB /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
 		842DEBAA1FDFDC7900762848 /* Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842DEBAD1FDFDC7900762848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				842DEBAD1FDFDC7900762848 /* AppDelegate.swift */,
 				842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */,
+				0479CF691FE6CCB1003E00DB /* EpisodeListViewController.swift */,
 				842DEBB11FDFDC7900762848 /* SearchViewController.swift */,
 				842DEBB31FDFDC7900762848 /* Main.storyboard */,
 				842DEBB61FDFDC7900762848 /* Assets.xcassets */,
@@ -288,6 +291,7 @@
 			files = (
 				842DEBB21FDFDC7900762848 /* SearchViewController.swift in Sources */,
 				842DEBAE1FDFDC7900762848 /* AppDelegate.swift in Sources */,
+				0479CF6A1FE6CCB1003E00DB /* EpisodeListViewController.swift in Sources */,
 				842DEBB01FDFDC7900762848 /* PodcastListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,10 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
         return 10
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath) as! PodcastTableCell
         
@@ -32,6 +36,16 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath)
+        performSegue(withIdentifier: "episodeSegue", sender: cell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "episodeSegue"{
+            //Probably send podcast with it?
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
