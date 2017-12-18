@@ -128,7 +128,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Podcasts" id="9Hn-4F-QEc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gz6-ox-Ya4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gz6-ox-Ya4">
+                            <connections>
+                                <action selector="addPodcastButton:" destination="x2P-gn-lGV" id="mmm-8G-zOZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="podcastTableView" destination="9qG-0o-FI0" id="pFz-mf-ZzA"/>
@@ -173,6 +177,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aAe-fW-ken">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>

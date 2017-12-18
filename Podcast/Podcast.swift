@@ -15,6 +15,7 @@ class Podcast: XMLMappable{
     var imageUrl: String?
     var episodeList = [Episode]()
     var summary: String?
+    var rssFeed: String?
     
     required init(map: XMLMap) {
         

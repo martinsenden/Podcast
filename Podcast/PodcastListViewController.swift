@@ -8,11 +8,15 @@
 
 import UIKit
 
+//We have to store podcasts & episodes persistently with CoreData. According to assignment?
 
 class PodcastListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var podcastTableView: UITableView!
     
+    @IBAction func addPodcastButton(_ sender: Any) {
+        
+    }
     var podcastList = [Podcast]()
     
     
@@ -37,6 +41,10 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath)
         performSegue(withIdentifier: "episodeSegue", sender: cell)
+    }
+    
+    func newPodcast(rssFeed: String){
+        //Create new podcast and parse all values (Separate function?)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
