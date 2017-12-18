@@ -8,16 +8,13 @@
 
 import UIKit
 
-class PodcastTableCell:  UITableViewCell {
-    
-    @IBOutlet weak var podcastImage: UIImageView!
-    @IBOutlet weak var podcastLabel: UILabel!
-}
-
 
 class PodcastListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var podcastTableView: UITableView!
+    
+    var podcastList = [Podcast]()
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -29,9 +26,10 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath) as! PodcastTableCell
+        let cell = podcastTableView.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath)
         
-        cell.textLabel?.text = "Röv"
+        cell.textLabel?.text = "PodcastTitle"
+        cell.detailTextLabel?.text = "ShortSummaryFromXML"
         return cell
         
     }
@@ -43,7 +41,7 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "episodeSegue"{
-            //Probably send podcast with it?
+            //Send which podcast with it
         }
     }
 

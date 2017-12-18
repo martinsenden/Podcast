@@ -8,21 +8,21 @@
 
 import UIKit
 
-class EpisodeCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-}
+
 
 class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var episodeListTableView: UITableView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = episodeListTableView.dequeueReusableCell(withIdentifier: "EpisodeCell", for: indexPath) as! EpisodeCell
+        let cell = episodeListTableView.dequeueReusableCell(withIdentifier: "EpisodeCell", for: indexPath) 
         
-        cell.textLabel!.text = "Fitta"
+        cell.textLabel!.text = "EpisodeTitle"
+        cell.detailTextLabel!.text = "Length"
         return cell
     }
     
