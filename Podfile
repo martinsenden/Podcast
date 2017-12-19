@@ -6,7 +6,6 @@ target 'Podcast' do
   use_frameworks!
 
   # Pods for Podcast
-  pod 'XMLMapper'
 	
 	
   target 'PodcastTests' do

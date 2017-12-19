@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import XMLMapper
 
-class Podcast: XMLMappable{
+struct Podcast{
     var title: String?
     var latestPublishDate: String?
     var imageUrl: String?
@@ -17,18 +16,10 @@ class Podcast: XMLMappable{
     var summary: String?
     var rssFeed: String?
     
-    required init(map: XMLMap) {
-        
+    init(){
+    
     }
-    
-    var nodeName: String!
-    
-    func mapping(map: XMLMap) {
-        title <- map["title"]
-        latestPublishDate <- map["pubDate"]
-        imageUrl <- map["image.url"]
-        summary <- map["description"]
+    init(rssFeed: String){
+        self.rssFeed = rssFeed
     }
-    
-    
 }
