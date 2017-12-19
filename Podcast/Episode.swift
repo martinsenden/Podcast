@@ -7,26 +7,11 @@
 //
 
 import Foundation
-import XMLMapper
 
-class Episode: XMLMappable{
-    var title: String?
+struct Episode {
+    var title: String
     var publishingDate: Date?
-    var duration: String?
-    var audioURL: String?
-    
-    required init(map: XMLMap) {
-        
-    }
-    
-    var nodeName: String!
-    
-     func mapping(map: XMLMap) {
-        title <- map["item.title"]
-        publishingDate <- map["item.pubDate"]
-        duration <- map["itunes:duration"]
-        audioURL <- map["enclosure.url"]
-    }
-    
-    
+    var duration: String
+    var audioURL: String
+   
 }
