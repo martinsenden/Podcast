@@ -24,8 +24,11 @@ class SearchViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: "http://itunes.so-nik.com")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        
     }
     
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
