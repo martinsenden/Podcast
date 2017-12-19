@@ -15,12 +15,13 @@
 		842DEBAE1FDFDC7900762848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBAD1FDFDC7900762848 /* AppDelegate.swift */; };
 		842DEBB01FDFDC7900762848 /* PodcastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */; };
 		842DEBB21FDFDC7900762848 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBB11FDFDC7900762848 /* SearchViewController.swift */; };
-		842DEBB51FDFDC7900762848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB31FDFDC7900762848 /* Main.storyboard */; };
 		842DEBB71FDFDC7900762848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB61FDFDC7900762848 /* Assets.xcassets */; };
 		842DEBBA1FDFDC7900762848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DEBB81FDFDC7900762848 /* LaunchScreen.storyboard */; };
 		842DEBC51FDFDC7900762848 /* PodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBC41FDFDC7900762848 /* PodcastTests.swift */; };
 		842DEBD01FDFDC7900762848 /* PodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DEBCF1FDFDC7900762848 /* PodcastUITests.swift */; };
 		842DEBE01FE042A700762848 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842DEBDF1FE0362B00762848 /* WebKit.framework */; };
+		8488A2531FE9BD400021916C /* icons8-pause-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8488A2521FE9BD3F0021916C /* icons8-pause-filled-50.png */; };
+		8488A2571FE9D9A00021916C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8488A2551FE9D9A00021916C /* Main.storyboard */; };
 		84AD45E81FE932BF00F8921D /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AD45E71FE932BF00F8921D /* image.png */; };
 		84AD45EC1FE935F300F8921D /* icons8-sound-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AD45EB1FE935F300F8921D /* icons8-sound-filled-50.png */; };
 		84AD45F01FE9376400F8921D /* icons8-play-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AD45EF1FE9376400F8921D /* icons8-play-filled-50.png */; };
@@ -53,7 +54,6 @@
 		842DEBAD1FDFDC7900762848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListViewController.swift; sourceTree = "<group>"; };
 		842DEBB11FDFDC7900762848 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		842DEBB41FDFDC7900762848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		842DEBB61FDFDC7900762848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842DEBB91FDFDC7900762848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842DEBBB1FDFDC7900762848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		842DEBCF1FDFDC7900762848 /* PodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastUITests.swift; sourceTree = "<group>"; };
 		842DEBD11FDFDC7900762848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842DEBDF1FE0362B00762848 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8488A2521FE9BD3F0021916C /* icons8-pause-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-pause-filled-50.png"; sourceTree = "<group>"; };
+		8488A2561FE9D9A00021916C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84AD45E71FE932BF00F8921D /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		84AD45EB1FE935F300F8921D /* icons8-sound-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-sound-filled-50.png"; sourceTree = "<group>"; };
 		84AD45EF1FE9376400F8921D /* icons8-play-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-play-filled-50.png"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		842DEBAC1FDFDC7900762848 /* Podcast */ = {
 			isa = PBXGroup;
 			children = (
+				8488A2551FE9D9A00021916C /* Main.storyboard */,
 				842DEBAD1FDFDC7900762848 /* AppDelegate.swift */,
 				842DEBAF1FDFDC7900762848 /* PodcastListViewController.swift */,
 				046177B71FE841BF0048D226 /* Podcast.swift */,
@@ -135,10 +138,8 @@
 				046177B91FE844C30048D226 /* Episode.swift */,
 				842DEBB11FDFDC7900762848 /* SearchViewController.swift */,
 				842974C31FE9274500E1FD00 /* PlayViewController.swift */,
-				842DEBB31FDFDC7900762848 /* Main.storyboard */,
 				84AD45E71FE932BF00F8921D /* image.png */,
-				84AD45EF1FE9376400F8921D /* icons8-play-filled-50.png */,
-				84AD45EB1FE935F300F8921D /* icons8-sound-filled-50.png */,
+				8488A2541FE9BD4C0021916C /* icons */,
 				842DEBB61FDFDC7900762848 /* Assets.xcassets */,
 				842DEBB81FDFDC7900762848 /* LaunchScreen.storyboard */,
 				842DEBBB1FDFDC7900762848 /* Info.plist */,
@@ -170,6 +171,16 @@
 				842DEBDF1FE0362B00762848 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8488A2541FE9BD4C0021916C /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				84AD45EF1FE9376400F8921D /* icons8-play-filled-50.png */,
+				84AD45EB1FE935F300F8921D /* icons8-sound-filled-50.png */,
+				8488A2521FE9BD3F0021916C /* icons8-pause-filled-50.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +293,10 @@
 				040A48E31FE01DCB0004398E /* .gitignore in Resources */,
 				84AD45F01FE9376400F8921D /* icons8-play-filled-50.png in Resources */,
 				842DEBBA1FDFDC7900762848 /* LaunchScreen.storyboard in Resources */,
+				8488A2571FE9D9A00021916C /* Main.storyboard in Resources */,
+				8488A2531FE9BD400021916C /* icons8-pause-filled-50.png in Resources */,
 				842DEBB71FDFDC7900762848 /* Assets.xcassets in Resources */,
 				84AD45EC1FE935F300F8921D /* icons8-sound-filled-50.png in Resources */,
-				842DEBB51FDFDC7900762848 /* Main.storyboard in Resources */,
 				84AD45E81FE932BF00F8921D /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,20 +364,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		842DEBB31FDFDC7900762848 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				842DEBB41FDFDC7900762848 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		842DEBB81FDFDC7900762848 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				842DEBB91FDFDC7900762848 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8488A2551FE9D9A00021916C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8488A2561FE9D9A00021916C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
