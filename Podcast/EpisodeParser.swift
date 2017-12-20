@@ -24,6 +24,7 @@ class EpisodeParser: NSObject, XMLParserDelegate {
     var pubDate = "" {
         didSet{
             pubDate = pubDate.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            //Might wanna make this look nice? Right now it has 01:06:21 GMT in it
         }
     }
     var audioUrl = "" {
@@ -36,7 +37,6 @@ class EpisodeParser: NSObject, XMLParserDelegate {
             duration = duration.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     }
-    
     
     func parseFeed(url: String, completionHandler: (([Episode]) -> Void)?){
         self.parserCompletionHandler = completionHandler

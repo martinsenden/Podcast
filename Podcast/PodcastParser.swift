@@ -17,7 +17,7 @@ class PodcastParser: NSObject, XMLParserDelegate {
     var titleSet = false
     var title = "" {
         didSet{
-            title = title.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            title = title.trimmingCharacters(in: CharacterSet.newlines)
         }
     }
     var pubDate = "" {
@@ -69,19 +69,28 @@ class PodcastParser: NSObject, XMLParserDelegate {
             pubDate = ""
             imageUrl = ""
             summary = ""
+            
         }
         
         if currentElement == "item"{
             insideItem = true
+        }
+        if currentElement == "image"{
+            for string in attributeDict{
+                if string.key == "title"{
+                    title += string.value
+                    print("sätter här uppe")
+                    titleSet = true
+                }
+            }
         }
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         if insideItem == false{
             switch currentElement {
-                case "title" where titleSet == false:
-                        title += string
-                        titleSet = true
+            case "title" where titleSet == false:
+                title += string
                 case "pubDate" where pubDate.isEmpty, "lastBuildDate" where pubDate.isEmpty:
                         print("Pubdate: \(string)")
                         pubDate += string
@@ -105,6 +114,7 @@ class PodcastParser: NSObject, XMLParserDelegate {
             tmpPodcast.imageUrl = imageUrl
             tmpPodcast.latestPublishDate = pubDate
             tmpPodcast.summary = summary
+            titleSet = true
         }
     }
     

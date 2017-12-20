@@ -23,8 +23,12 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = episodeListTableView.dequeueReusableCell(withIdentifier: "EpisodeCell", for: indexPath) 
         
-        cell.textLabel!.text = episodeList[indexPath.row].title
-        cell.detailTextLabel!.text = "Length: \(episodeList[indexPath.row].duration)"
+        let textLabel = cell.textLabel!
+        
+        textLabel.numberOfLines = 0
+        textLabel.lineBreakMode = .byTruncatingTail
+        textLabel.text = episodeList[indexPath.row].title
+        cell.detailTextLabel!.text = "Length: \(episodeList[indexPath.row].duration!), Release date: \(episodeList[indexPath.row].publishingDate!)"
         return cell
     }
     
@@ -51,6 +55,9 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        episodeListTableView.delegate = self
+        episodeListTableView.dataSource = self
+        episodeListTableView.rowHeight = 85
         fetchData(url: rssFeed)
         
         // Do any additional setup after loading the view, typically from a nib.
