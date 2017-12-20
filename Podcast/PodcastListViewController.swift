@@ -12,10 +12,11 @@ import UIKit
 //Should we store podcasts persistently with CoreData?
 // - Addon if we have time
 
-class PodcastListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate {
+class PodcastListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var podcastList = [Podcast]()
     var currentElement = ""
+    var tmpRssFeed = ""
     //var tmpPodcast = Podcast()
     
     @IBOutlet var podcastTableView: UITableView!
@@ -77,11 +78,20 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = podcastTableView.cellForRow(at: indexPath)
+        tmpRssFeed = podcastList[indexPath.row].rssFeed!
         //Send RSSUrl to Episode View Controller and let that handle parsing that data. Speeds up runtime.
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "episodeSegue", sender: cell)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "episodeSegue"{
+            let destinationViewController = segue.destination as! EpisodeListViewController
+            destinationViewController.rssFeed = tmpRssFeed
+        }
+    }
+
     
     func fetchData(url: String){
         let podcastParser = PodcastParser()
@@ -106,15 +116,6 @@ class PodcastListViewController: UIViewController, UITableViewDelegate, UITableV
         podcastTableView.reloadData()
     }
     
-    
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "episodeSegue"{
-            //Send which podcast with it
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -6,15 +6,6 @@
 //  Copyright © 2017 at.fhooe.mcm. All rights reserved.
 //
 
-
-/*
- Kod för att hämta ut enclosure-urlen
- for string in attributeDict{
-    if string.key == "url"{
-        tmpPodcast.imageUrl = string.value
-    }
- }
- */
 import UIKit
 
 class PodcastParser: NSObject, XMLParserDelegate {
@@ -87,21 +78,21 @@ class PodcastParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         if insideItem == false{
-        switch currentElement {
-            case "title" where titleSet == false:
-                title += string
-                titleSet = true
-        case "pubDate" where pubDate.isEmpty, "lastBuildDate" where pubDate.isEmpty:
-                print("Pubdate: \(string)")
-                pubDate += string
-        case "url":
-                print("Image Url: \(string)")
-                imageUrl += string
-            case "itunes:summary":
-                print("Summary: \(string)")
-                summary += string
-            default:
-                break
+            switch currentElement {
+                case "title" where titleSet == false:
+                        title += string
+                        titleSet = true
+                case "pubDate" where pubDate.isEmpty, "lastBuildDate" where pubDate.isEmpty:
+                        print("Pubdate: \(string)")
+                        pubDate += string
+                case "url":
+                        print("Image Url: \(string)")
+                        imageUrl += string
+                case "itunes:summary":
+                        print("Summary: \(string)")
+                        summary += string
+                default:
+                        break
             }
         }
     }

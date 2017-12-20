@@ -9,9 +9,9 @@
 import Foundation
 
 struct Episode {
-    var title: String
-    var publishingDate: Date?
-    var duration: String
-    var audioURL: String
+    var title: String?
+    var publishingDate: String?
+    var duration: String?
+    var audioURL: String?
    
 }
