@@ -8,11 +8,10 @@
 
 import Foundation
 
-struct Podcast{
+struct Podcast {
     var title: String?
     var latestPublishDate: String?
     var imageUrl: String?
-    var episodeList = [Episode]()
     var summary: String?
     var rssFeed: String?
     
