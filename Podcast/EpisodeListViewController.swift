@@ -8,9 +8,17 @@
 
 import UIKit
 
+/*
+ Receive podcast from table
+ Get Podcasts RSSfeed
+ 
+ */
 
 
 class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var podcast = Podcast()
+    
     
     @IBOutlet weak var episodeListTableView: UITableView!
     
