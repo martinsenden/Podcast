@@ -31,12 +31,12 @@ class PlayViewController: UIViewController{
         self.view.layer.addSublayer(playerLayer)
         
         playButton = UIButton(type: UIButtonType.system) as UIButton
-        let xPostion:CGFloat = 130
-        let yPostion:CGFloat = 480
+        let xPosition:CGFloat = 130
+        let yPosition:CGFloat = 480
         let buttonWidth:CGFloat = 150
         let buttonHeight:CGFloat = 45
         
-        playButton!.frame = CGRect(x: xPostion, y: yPostion, width: buttonWidth, height: buttonHeight)
+        playButton!.frame = CGRect(x: xPosition, y: yPosition, width: buttonWidth, height: buttonHeight)
         playButton!.backgroundColor = UIColor.white
         playButton!.setTitle("Play", for: UIControlState.normal)
         playButton!.tintColor = UIColor.blue

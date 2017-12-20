@@ -24,7 +24,6 @@ class PodcastParser: NSObject, XMLParserDelegate {
     var currentElement = ""
     var insideItem = false
     var titleSet = false
-    var gettingImageUrl = false
     var title = "" {
         didSet{
             title = title.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
@@ -81,20 +80,9 @@ class PodcastParser: NSObject, XMLParserDelegate {
             summary = ""
         }
         
-        if currentElement == "image" && !insideItem {
-            gettingImageUrl = true
-        }
-        
         if currentElement == "item"{
             insideItem = true
-            
         }
-        
-        if insideItem {
-
-        }
-        
-        
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
