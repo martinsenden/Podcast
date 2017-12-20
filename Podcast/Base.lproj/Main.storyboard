@@ -41,11 +41,6 @@
                                 <rect key="frame" x="16" y="540" width="30" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY6-3e-PuT">
-                                <rect key="frame" x="169" y="468" width="84" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play" image="icons8-play-filled-50.png"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="B2m-0o-LIL"/>
@@ -230,7 +225,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-play-filled-50.png" width="50" height="50"/>
         <image name="icons8-sound-filled-50.png" width="50" height="50"/>
         <image name="image.png" width="762" height="641"/>
     </resources>
