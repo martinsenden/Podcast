@@ -15,20 +15,23 @@ class PlayViewController: UIViewController{
     var playerItem: AVPlayerItem?
     var playButton: UIButton?
     var rssFeed: String? = "null"
+    var imageUrl: String = "null"
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func sliderVolumeChanged(_ sender: UISlider) {
+        var currentValue = Float(sender.value)
+        player?.volume = currentValue
+    }
     
     override func viewDidLoad(){
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        print(rssFeed)
+        downloadImage(url: imageUrl)
         let url = URL(string: rssFeed!)
-        let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
+        let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
         player = AVPlayer(playerItem: playerItem)
         
-        let playerLayer=AVPlayerLayer(player: player!)
+        let playerLayer = AVPlayerLayer(player: player!)
         playerLayer.frame=CGRect(x:0, y:0, width:10, height:50)
         self.view.layer.addSublayer(playerLayer)
         
@@ -47,6 +50,16 @@ class PlayViewController: UIViewController{
         self.view.addSubview(playButton!)
     }
     
+    func downloadImage(url: String){
+        let url = URL(string: url)
+        if let data = try? Data(contentsOf: url!) {
+            imageView.image = UIImage(data: data)
+        } //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        else {
+            
+        }
+    }
+
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }

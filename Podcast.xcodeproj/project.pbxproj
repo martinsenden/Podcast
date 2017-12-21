@@ -258,6 +258,11 @@
 					842DEBA91FDFDC7900762848 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					842DEBBF1FDFDC7900762848 = {
 						CreatedOnToolsVersion = 9.1;
