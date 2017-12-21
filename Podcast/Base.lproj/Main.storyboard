@@ -5,7 +5,8 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,36 +19,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-Ap-uKw">
-                                <rect key="frame" x="16" y="34" width="343" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-Ap-uKw">
+                                <rect key="frame" x="16" y="78" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="YXD-46-mTE">
-                                <rect key="frame" x="16" y="80" width="343" height="343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="45p-hL-cac">
-                                <rect key="frame" x="51" y="542" width="300" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ruT-Fg-lgb">
+                                <rect key="frame" x="16" y="438" width="343" height="2"/>
+                            </progressView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="45p-hL-cac">
+                                <rect key="frame" x="61" y="540" width="300" height="30"/>
+                                <connections>
+                                    <action selector="sliderVolumeChanged:" destination="RP5-Ke-jtX" eventType="valueChanged" id="5xM-wB-0vg"/>
+                                </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-sound-filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFS-KN-CAO">
-                                <rect key="frame" x="16" y="544" width="30" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-sound-filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFS-KN-CAO">
+                                <rect key="frame" x="16" y="540" width="30" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="QsC-wT-jn6"/>
+                                    <constraint firstAttribute="width" constant="30" id="tx5-qy-8FI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimagefound" translatesAutoresizingMaskIntoConstraints="NO" id="7ER-Ft-hP9">
+                                <rect key="frame" x="37" y="107" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="W9m-4f-6tZ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="45p-hL-cac" firstAttribute="leading" secondItem="wFS-KN-CAO" secondAttribute="trailing" constant="17" id="1yS-dO-1xx"/>
+                            <constraint firstItem="ruT-Fg-lgb" firstAttribute="top" secondItem="7ER-Ft-hP9" secondAttribute="bottom" constant="31" id="Ouh-CV-kNT"/>
+                            <constraint firstItem="7ER-Ft-hP9" firstAttribute="top" secondItem="B2m-0o-LIL" secondAttribute="top" constant="43" id="RD9-k8-DDo"/>
+                            <constraint firstItem="f2z-Ap-uKw" firstAttribute="top" secondItem="B2m-0o-LIL" secondAttribute="top" constant="14" id="TmJ-cf-GI0"/>
+                            <constraint firstItem="ruT-Fg-lgb" firstAttribute="leading" secondItem="wFS-KN-CAO" secondAttribute="leading" id="UZd-jH-x8u"/>
+                            <constraint firstItem="ruT-Fg-lgb" firstAttribute="leading" secondItem="f2z-Ap-uKw" secondAttribute="leading" id="Uju-us-4Qe"/>
+                            <constraint firstItem="7ER-Ft-hP9" firstAttribute="centerX" secondItem="ruT-Fg-lgb" secondAttribute="centerX" constant="-0.5" id="YLr-Dt-Ifz"/>
+                            <constraint firstItem="B2m-0o-LIL" firstAttribute="bottom" secondItem="wFS-KN-CAO" secondAttribute="bottom" constant="51" id="ZAv-RH-kNv"/>
+                            <constraint firstItem="7ER-Ft-hP9" firstAttribute="centerX" secondItem="f2z-Ap-uKw" secondAttribute="centerX" constant="-0.5" id="f1y-H1-Jj6"/>
+                            <constraint firstItem="ruT-Fg-lgb" firstAttribute="leading" secondItem="nFx-Jk-ehE" secondAttribute="leadingMargin" id="nBw-sa-csb"/>
+                            <constraint firstItem="B2m-0o-LIL" firstAttribute="bottom" secondItem="45p-hL-cac" secondAttribute="bottom" constant="49" id="sOz-f2-aSi"/>
+                            <constraint firstItem="wFS-KN-CAO" firstAttribute="top" secondItem="45p-hL-cac" secondAttribute="top" id="ssO-sh-B6s"/>
+                            <constraint firstItem="7ER-Ft-hP9" firstAttribute="leading" secondItem="B2m-0o-LIL" secondAttribute="leading" constant="37" id="xzj-M9-z5h"/>
+                            <constraint firstItem="7ER-Ft-hP9" firstAttribute="centerX" secondItem="nFx-Jk-ehE" secondAttribute="centerX" constant="-0.5" id="z81-9b-AZ3"/>
+                            <constraint firstItem="ruT-Fg-lgb" firstAttribute="trailing" secondItem="45p-hL-cac" secondAttribute="trailing" id="zTc-k3-DxT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B2m-0o-LIL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" id="gpu-fF-WZP"/>
+                    <connections>
+                        <outlet property="imageView" destination="7ER-Ft-hP9" id="9tx-WX-fKo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHd-7t-jNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1684" y="321.58920539730138"/>
+            <point key="canvasLocation" x="-1191.2" y="419.64017991004499"/>
         </scene>
-        <!--Search-->
+        <!--Search View Controller-->
         <scene sceneID="4ii-La-N8m">
             <objects>
                 <viewController id="wap-IT-oUR" customClass="SearchViewController" customModule="Podcast" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +87,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lhC-4t-12r"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="OA1-y2-nLL"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="OA1-y2-nLL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExY-uT-JaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,6 +207,7 @@
                     </view>
                     <connections>
                         <outlet property="episodeListTableView" destination="rvx-PM-8ff" id="qsD-Mn-wYG"/>
+                        <segue destination="RP5-Ke-jtX" kind="show" identifier="playsegue" id="nGs-z5-ckk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyP-hu-jL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,7 +218,7 @@
         <scene sceneID="pBa-Lh-Sq5">
             <objects>
                 <navigationController id="9Uw-8n-BKb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Podcasts" id="j8P-jj-hX3"/>
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="Podcast" selectedImage="Podcast" id="j8P-jj-hX3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P2m-we-u8g">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -212,7 +243,6 @@
                     <connections>
                         <segue destination="9Uw-8n-BKb" kind="relationship" relationship="viewControllers" id="m1a-rC-xs0"/>
                         <segue destination="wap-IT-oUR" kind="relationship" relationship="viewControllers" id="58f-7V-m58"/>
-                        <segue destination="RP5-Ke-jtX" kind="relationship" relationship="viewControllers" id="6dT-8K-kAK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwR-Xj-hfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,7 +251,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Podcast" width="76" height="76"/>
         <image name="icons8-sound-filled-50.png" width="50" height="50"/>
-        <image name="image.png" width="762" height="641"/>
+        <image name="noimagefound" width="230" height="230"/>
     </resources>
 </document>

@@ -13,5 +13,6 @@ struct Episode {
     var publishingDate: String?
     var duration: String?
     var audioURL: String?
+    var imageUrl: String?
    
 }

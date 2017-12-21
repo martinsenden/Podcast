@@ -11,7 +11,9 @@ import UIKit
 class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var rssFeed: String = ""
+    var imageUrl: String = ""
     var episodeList = [Episode]()
+    
     
     
     @IBOutlet weak var episodeListTableView: UITableView!
@@ -32,9 +34,24 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Send to play function
-        
+        let cell = episodeListTableView.cellForRow(at: indexPath)
+        rssFeed = episodeList[indexPath.row].audioURL!
+        imageUrl = episodeList[indexPath.row].imageUrl!
+
+        print(rssFeed)
+        episodeListTableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "playsegue", sender: cell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playsegue"{
+            let destinationViewController = segue.destination as! PlayViewController
+            destinationViewController.rssFeed = rssFeed
+            destinationViewController.imageUrl = imageUrl
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

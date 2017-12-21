@@ -38,6 +38,12 @@ class EpisodeParser: NSObject, XMLParserDelegate {
         }
     }
     
+    var imageUrl = "" {
+        didSet{
+            imageUrl = imageUrl.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        }
+    }
+    
     func parseFeed(url: String, completionHandler: (([Episode]) -> Void)?){
         self.parserCompletionHandler = completionHandler
         let request = URLRequest(url: URL(string: url)!)
@@ -68,6 +74,7 @@ class EpisodeParser: NSObject, XMLParserDelegate {
             pubDate = ""
             audioUrl = ""
             duration = ""
+            imageUrl = ""
             insideItem = true
         }
         if currentElement == "enclosure"{
@@ -78,6 +85,16 @@ class EpisodeParser: NSObject, XMLParserDelegate {
                 }
             }
         }
+        if currentElement == "itunes:image"{
+            for string in attributeDict{
+                if string.key == "href"{
+                    imageUrl += string.value
+                    print("Image URL: \(audioUrl)")
+                }
+            }
+        }
+        
+        
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
@@ -92,6 +109,7 @@ class EpisodeParser: NSObject, XMLParserDelegate {
                 case "itunes:duration":
                     duration += string
                     print("Duration \(duration)")
+
                 default:
                     break
             }
@@ -100,7 +118,7 @@ class EpisodeParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item"{
-            let episode = Episode(title: title, publishingDate: pubDate, duration: duration, audioURL: audioUrl)
+            let episode = Episode(title: title, publishingDate: pubDate, duration: duration, audioURL: audioUrl, imageUrl: imageUrl)
             episodeList.append(episode)
             print(episode)
             print("Added item")
