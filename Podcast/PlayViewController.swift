@@ -14,7 +14,8 @@ class PlayViewController: UIViewController{
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var playButton: UIButton?
-    
+    var playbackSlider: UISlider?
+   
     override func viewDidLoad(){
         super.viewDidLoad()
     }
@@ -42,6 +43,43 @@ class PlayViewController: UIViewController{
         playButton!.tintColor = UIColor.blue
         playButton!.addTarget(self, action: #selector(PlayViewController.playButtonTapped(_:)), for: .touchUpInside)
         self.view.addSubview(playButton!)
+        
+        playbackSlider = UISlider(frame:CGRect(x: 50, y: 450, width: 300, height: 20))
+        playbackSlider!.minimumValue = 0
+        
+        let duration : CMTime = playerItem.asset.duration
+        let seconds : Float64 = CMTimeGetSeconds(duration)
+        
+        playbackSlider!.maximumValue = Float(seconds)
+        playbackSlider!.isContinuous = false
+        playbackSlider!.tintColor = UIColor.blue
+        
+        playbackSlider?.addTarget(self, action: #selector(PlayViewController.playbackSliderValueChanged(_:)), for: .valueChanged)
+        playbackSlider!.addTarget(self, action: "playbackSliderValueChanged:", for: .valueChanged)
+        
+        self.view.addSubview(playbackSlider!)
+        
+        player!.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, 1), queue: DispatchQueue.main) { (CMTime) -> Void in
+            if self.player!.currentItem?.status == .readyToPlay {
+                let time : Float64 = CMTimeGetSeconds(self.player!.currentTime());
+                self.playbackSlider!.value = Float ( time );
+            }
+        }
+    }
+    
+    @objc
+    func playbackSliderValueChanged(_ playbackSlider:UISlider)
+    {
+        
+        let seconds : Int64 = Int64(playbackSlider.value)
+        let targetTime:CMTime = CMTimeMake(seconds, 1)
+        
+        player!.seek(to: targetTime)
+        
+        if player!.rate == 0
+        {
+            player?.play()
+        }
     }
     
     override func didReceiveMemoryWarning(){
@@ -62,4 +100,5 @@ class PlayViewController: UIViewController{
             playButton!.setImage(UIImage(named: "icons8-pause-filled-50.png"), for: UIControlState.normal)
         }
     }
+    
 }

@@ -34,6 +34,7 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Send to play function
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
