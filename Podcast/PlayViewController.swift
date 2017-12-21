@@ -14,6 +14,7 @@ class PlayViewController: UIViewController{
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var playButton: UIButton?
+    var rssFeed: String? = "null"
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -22,7 +23,8 @@ class PlayViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let url = URL(string: "http://traffic.libsyn.com/heatrocks/Jay_Smooth_on_Run_DMCs__Raising_Hell_.mp3?dest-id=576777")
+        print(rssFeed)
+        let url = URL(string: rssFeed!)
         let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
         player = AVPlayer(playerItem: playerItem)
         
@@ -38,6 +40,7 @@ class PlayViewController: UIViewController{
         
         playButton!.frame = CGRect(x: xPosition, y: yPosition, width: buttonWidth, height: buttonHeight)
         playButton!.backgroundColor = UIColor.white
+        playButton!.setImage(UIImage(named: "icons8-play-filled-50.png"), for: UIControlState.normal)
         playButton!.setTitle("Play", for: UIControlState.normal)
         playButton!.tintColor = UIColor.blue
         playButton!.addTarget(self, action: #selector(PlayViewController.playButtonTapped(_:)), for: .touchUpInside)
@@ -54,12 +57,12 @@ class PlayViewController: UIViewController{
         if player?.rate == 0
         {
             player!.play()
-            playButton!.setTitle("Play", for: UIControlState.normal)
-            playButton!.setImage(UIImage(named: "icons8-play-filled-50.png"), for: UIControlState.normal)
-            } else {
-            player!.pause()
             playButton!.setTitle("Pause", for: UIControlState.normal)
             playButton!.setImage(UIImage(named: "icons8-pause-filled-50.png"), for: UIControlState.normal)
+            } else {
+            player!.pause()
+            playButton!.setTitle("Play", for: UIControlState.normal)
+            playButton!.setImage(UIImage(named: "icons8-play-filled-50.png"), for: UIControlState.normal)
         }
     }
 }
