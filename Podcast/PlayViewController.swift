@@ -45,14 +45,7 @@ class PlayViewController: UIViewController{
         playerLayer.frame=CGRect(x:0, y:0, width:10, height:50)
         self.view.layer.addSublayer(playerLayer)
         
-        /*playButton = UIButton(type: UIButtonType.system) as UIButton
-        let xPosition:CGFloat = 130
-        let yPosition:CGFloat = 480
-        let buttonWidth:CGFloat = 150
-        let buttonHeight:CGFloat = 45
         
-        playButton!.frame = CGRect(x: xPosition, y: yPosition, width: buttonWidth, height: buttonHeight)*/
-        //playButton!.backgroundColor = UIColor.white
         playButton!.setImage(UIImage(named: "icons8-play-filled-50.png"), for: UIControlState.normal)
         playButton!.setTitle("Play", for: UIControlState.normal)
         playButton!.tintColor = UIColor.blue
@@ -65,9 +58,6 @@ class PlayViewController: UIViewController{
         timeSlider!.maximumValue = Float(seconds)
         timeSlider!.isContinuous = false
         timeSlider!.tintColor = UIColor.blue
-        
-        //timeSlider?.addTarget(self, action: #selector(PlayViewController.playbackSliderValueChanged(_:)), for: .valueChanged)
-        //timeSlider!.addTarget(self, action: "playbackSliderValueChanged:", for: .valueChanged)
         
         
         player!.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, 1), queue: DispatchQueue.main) { (CMTime) -> Void in
@@ -82,7 +72,7 @@ class PlayViewController: UIViewController{
         let url = URL(string: url)
         if let data = try? Data(contentsOf: url!) {
             imageView.image = UIImage(data: data)
-        } //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        }
         else {
             
         }
